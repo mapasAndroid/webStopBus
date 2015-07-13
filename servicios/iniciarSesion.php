@@ -1,5 +1,4 @@
 <?php
-  //$ruta = $_GET['id_ruta'];
   include_once("../valid/bd/conexion.php");
 	$bd = new Conexion();
 	$link = $bd->conectar();
