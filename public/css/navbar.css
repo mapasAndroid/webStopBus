@@ -1,0 +1,46 @@
+.logo{
+	text-align: center;
+	margin-top: 32px;
+	margin-bottom: 16px;
+	border-bottom: 1px solid #ddd;
+}
+
+#logo-container{
+	height: 120px;
+	margin-bottom: 32px;
+}
+
+#front-page-logo{
+	height: 100%
+}
+
+.no-hover:hover{
+	background: none !important
+
+}
+
+.no-pad-bot{
+	padding-bottom: 0;
+}
+
+#index-banner .container{
+	position: relative;
+	width: 85%;
+	color: #444;
+}
+
+.section{
+	padding-top: 1rem;
+
+}
+
+main{
+	padding-left: 240px;
+	margin-top: -2em;
+}
+
+@media only screen and (max-width: 992px){
+	main{
+		padding-left: 0;
+	}
+}

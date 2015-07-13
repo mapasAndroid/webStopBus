@@ -1,0 +1,186 @@
+/*HEADER*/
+
+body{
+
+	padding-top:50px;
+}
+.navbar{
+	margin-bottom: 0;
+}
+
+nav {
+-webkit-box-shadow: 0px 1px 15px 1px rgba(50, 50, 50, 0.52);
+-moz-box-shadow:    0px 1px 15px 1px rgba(50, 50, 50, 0.52);
+box-shadow:         0px 1px 15px 1px rgba(50, 50, 50, 0.52);
+}
+
+
+
+header a{
+	color: #212121;
+}
+
+.jumbotron{
+	background: #4CAF50;
+	color:#fff; 
+	padding: 20px 0;
+}
+
+footer{
+	background: #4CAF50;
+	color:#fff; 
+	padding: 20px 0;
+	font-size: 15px;
+	text-align: center;
+}
+
+/*POST*/
+.main{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#registro{
+margin-top: 15px;
+margin-bottom: 20px;
+}
+
+.post{
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #999;
+}
+
+.post .post-title a{
+	color:#333;
+}
+
+.post .thumb{
+	margin-right: 10px;
+	width: 40%
+}
+
+.post .thumb img{
+	margin-top: 10px;
+	width: 100%;
+}
+
+.post .contenedor-botones{
+	width: 100%;
+}
+
+.row-caja{
+	margin-top: 1%;
+}
+
+textarea{
+	resize: none;
+}
+
+
+
+	#logo{
+		margin-right: 30px;
+	}
+
+
+	.wrap input {
+		border: none;
+		text-align: center;
+		background: #fff;
+		font-family:Lato ;
+		font-weight:700 ;
+		display: block;
+		height: 40px;
+		outline: none;
+		width: calc(100% - 24px) ;
+		margin: auto;
+		margin-top: 10px;
+		padding: 6px 12px 6px 12px;
+		
+	}
+
+	#boton, #submit_button{
+		background-color: #4CAF50;
+		border-radius: 10px;
+		border-bottom: 4px solid #2E7D32;
+		color: #fff;
+		height: 40px;
+		
+	}
+
+	#submit_button{
+	margin-top: 3%;
+	margin-left: 18% !important;
+	width: 60%;
+}
+
+
+	.main h2{
+		font-size: 20px;
+	}
+
+	#cuerpo h2{
+		text-align: center;
+		font-size: 40px;
+	}
+
+	#olvido, #registro{
+color:#2E7D32;
+
+	}
+
+	.wrap input[type="text"], .wrap input[type="password"], .wrap input[type="email"] {
+
+     border-bottom: 2px gray solid;
+     border-radius: 10px;
+
+	}
+
+		#submit_button{
+			margin-left: 40%;
+		}
+
+		.margin-left-small{
+			margin-left: 8%;
+		}
+
+		.margin-left-small img{
+			margin-left: 30%;
+		}
+
+
+	input::-webkit-input-placeholder {
+    text-align: center;
+}
+input::-moz-placeholder {
+    text-align: center;
+}
+
+		/*Media Querie*/
+		@media screen and (max-width: 400px){
+			.post .thumb {
+				width: 100%;
+				margin-bottom:20px;
+				margin-right: 0;
+			}
+		}
+
+
+		@media screen and (min-width: 992px){
+			.margin-left-small{
+				margin-left: 0;
+			}
+		}
+
+		@media screen and (max-width: 992px){
+			.margin-left-small{
+				display: none;
+			}
+		}
+
+		@media screen and (min-width: 1190px){
+			.margin-left-small{
+				margin-left: 7%;
+			}
+		}
