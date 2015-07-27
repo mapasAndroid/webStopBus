@@ -13,7 +13,8 @@ $longitud = $_POST['longitud'];
 $bd = new Conexion();
 $link = $bd->conectar();
 
-$consulta = "update paradero set id_paradero='".$id_ubicacion."', nombre = '".$nombre."' , direccion= '".$direccion."', latitud= '".$latitud."' , longitud= '".$longitud."' where id_paradero = '".$paraderoActual."'";
+$x= explode("$", $paraderoActual);
+$consulta = "update paradero set id_paradero='".$x[0]."$".$id_ubicacion."', nombre = '".$nombre."' , direccion= '".$direccion."', latitud= '".$latitud."' , longitud= '".$longitud."' where id_paradero = '".$paraderoActual."'";
 
 $resultado = mysqli_query($link, $consulta);
 
