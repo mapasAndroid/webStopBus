@@ -8,8 +8,8 @@ $link = $bd->conectar();
 $tabla="CREATE TABLE empresa
 (
 	nit varchar (30),
-	nombre varchar (80) NOT NULL,
-	direccion varchar (80) NOT NULL,
+	nombre varchar (150) NOT NULL,
+	direccion varchar (150) NOT NULL,
 	telefono varchar (20) NOT NULL,
 	PRIMARY KEY (nit)
 	)ENGINE = InnoDB;";
@@ -24,10 +24,9 @@ if($var){
 $tabla = "CREATE TABLE pasajero
 (
 	usuario varchar (20) NOT NULL,
-	nombre varchar (80) NOT NULL,
-	correo varchar (80) NOT NULL,
+	nombre varchar (150) NOT NULL,
+	correo varchar (150) NOT NULL,
 	password varchar (45) NOT NULL,
-	actualizacion varchar (10) NOT NULL,
 	rol varchar (10) NOT NULL,
 	nit_empresa varchar (30) NULL,
 	PRIMARY KEY (usuario),
@@ -42,27 +41,10 @@ if($var){
 }
 
 
-
-$tabla = "create table recientes(
-	id varchar (20),
-	id_usuario varchar(20) NOT NULL,
-	nombre varchar(30) NOT NULL,
-	latitud varchar(20) NOT NULL,
-	longitud varchar(20) NOT NULL,
-	PRIMARY KEY (id),
-	FOREIGN KEY(id_usuario) REFERENCES pasajero (usuario) ON DELETE CASCADE ON UPDATE CASCADE
-	) ENGINE = InnoDB;";
-$var = mysqli_query($link, $tabla);
-if($var){
-	echo "recientes creada correctamente <br>";
-}else{
-	echo "recientes error <br>";
-}
-
 $tabla="CREATE TABLE ruta
 (
 	id_ruta varchar (30),
-	nombre varchar (80) NOT NULL,
+	nombre varchar (150) NOT NULL,
 	PRIMARY KEY (id_ruta)
 	)ENGINE = InnoDB;";
 $var = mysqli_query($link, $tabla);
@@ -76,7 +58,7 @@ if($var){
 $tabla="CREATE TABLE paradero
 (
 	id_paradero varchar (30),
-	nombre varchar (80) NOT NULL,
+	nombre varchar (150) NOT NULL,
 	latitud varchar (40) NOT NULL,
 	longitud varchar (40) NOT NULL,
 	PRIMARY KEY (id_paradero)
@@ -107,7 +89,7 @@ if($var){
 $tabla="CREATE TABLE bus
 (
 	placa varchar (10),
-	conductor varchar (80) NOT NULL,
+	conductor varchar (150) NOT NULL,
 	id_ruta varchar (80),
 	nit varchar (30) NOT NULL,
 	PRIMARY KEY (placa),

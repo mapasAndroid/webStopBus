@@ -17,11 +17,11 @@ include("../../../valid/validacionRol.php");
    <div class="container">
      <div class="row contenedor">
        <div class="col s12">
-         
+
          <div class="listaEmpresas">
 
           <!-- antes del formulario, hacemos la consulta de las empersas nuevamente-->
-          <?php 
+          <?php
           include_once("../../../valid/bd/conexion.php");
           $bd = new Conexion();
           $link = $bd->conectar();
@@ -37,7 +37,7 @@ include("../../../valid/validacionRol.php");
                 <div class="input-field col s6 offset-s3">
                   <select name="persona">
                     <!-- llenarlos con la consulta-->
-                    <?php 
+                    <?php
                     $consulta = "SELECT * from pasajero";
                     $resultado = mysqli_query($link, $consulta);
 
@@ -60,7 +60,7 @@ include("../../../valid/validacionRol.php");
                 <div class="input-field col s6 offset-s3">
                   <select name="empresa">
                     <option value="ninguna">No pertenece a ninguna empresa</option>
-                    <?php 
+                    <?php
                     $consulta = "SELECT * from empresa";
                     $resultado = mysqli_query($link, $consulta);
 
@@ -104,26 +104,22 @@ include("../../../valid/validacionRol.php");
                   <input id="e_contra" type="password" class="validate" required name="password">
                   <label for="text">Contraseña</label>
                 </div>
+                
                 <div class="input-field col s4">
-                  <i class="material-icons prefix">swap_vert</i>
-                  <input id="e_actual" type="text" class="validate" required name="actualizacion">
-                  <label for="text">Actualizacion</label>
-                </div>
-                <div class="input-field col s4">
-                  
+
                   <select name="rol" id="e_rol">
                     <option value="admin">Administrador</option>
                     <option value="usuario">Usuario</option>
                   </select>
                   <label for="text">Rol</label>
                 </div>
-                
+
               </div>
 
 
               <div class="row">
                 <div class="col s4 offset-s5">
-                  <?php 
+                  <?php
 
                   if ($c1 == 0){
                       echo '<a class="btn disabled">Enviar</a>';
@@ -133,7 +129,7 @@ include("../../../valid/validacionRol.php");
                   }
 
                   ?>
-                  
+
 
 
                 </div>
@@ -151,11 +147,11 @@ include("../../../valid/validacionRol.php");
                 <div class="input-field col s6 offset-s3">
                   <select name="persona">
                     <!-- llenarlos con la consulta-->
-                    <?php 
+                    <?php
                     $consulta = "SELECT * from pasajero";
                     $resultado = mysqli_query($link, $consulta);
 
-                    $cont = 0;  
+                    $cont = 0;
                       while($fila = mysqli_fetch_array($resultado)){
                       echo '<option value="'.$fila['usuario'].'">'.$fila['nombre'].'</option>';
                       $cont++;
@@ -174,7 +170,7 @@ include("../../../valid/validacionRol.php");
               </div>
               <div class="row">
                 <div class="col s4 offset-s5">
-                  <?php 
+                  <?php
                   if($cont == 0){
                       echo '<a class="btn disabled">Eliminar</a>';
                     }else{
@@ -182,7 +178,7 @@ include("../../../valid/validacionRol.php");
                             </button>';
                     }
                   ?>
-                 
+
                 </div>
               </div>
             </form>
@@ -203,7 +199,7 @@ include("../../../valid/validacionRol.php");
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../../../public/js/materialize.min.js"></script>
 <script src="../../../public/dist/sweetalert.min.js"></script>
-<script> 
+<script>
 $(document).ready(function(){
   $('select').material_select();
   $(".button-collapse").sideNav();

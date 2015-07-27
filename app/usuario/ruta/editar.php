@@ -7,19 +7,20 @@ $id = $_POST['id_ruta'];
 $nombre = $_POST['nombre'];
 
 //nos conectamos con la bd y hacemos el udpate
-          $bd = new Conexion();
-          $link = $bd->conectar();
+$bd = new Conexion();
+$link = $bd->conectar();
 
-          $consulta = "update ruta set id_ruta = '".$id."', nombre = '".$nombre."' where id_ruta = '".$rutaActual."'";
+$consulta = "update ruta set id_ruta = '".$id."', nombre = '".$nombre."' where id_ruta = '".$rutaActual."'";
 
-          $resultado = mysqli_query($link, $consulta);
-          $bd->desconectar();
+$resultado = mysqli_query($link, $consulta);
 
-   
-          	$_SESSION['mensaje'] = "ruta actualizada correctamente";
-		  	$_SESSION['tipo'] = 'success';
-        	header('Location: /stopbus/app/usuario/ruta/');
+$bd->desconectar();
 
-          
-          
+
+$_SESSION['mensaje'] = "ruta actualizada correctamente";
+$_SESSION['tipo'] = 'success';
+header('Location: /stopbus/app/usuario/ruta/');
+
+
+
 ?>

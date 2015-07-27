@@ -10,21 +10,19 @@ $conductor = $_POST['conductor'];
 
 
 //nos conectamos con la bd y hacemos el udpate
-          $bd = new Conexion();
-          $link = $bd->conectar();
+$bd = new Conexion();
+$link = $bd->conectar();
 
-          $consulta = "update bus set placa = '".$placa."', conductor = '".$conductor."' , 
-          id_ruta = '".$ruta."' , nit= '".$empresa."' where placa = '".$busActual."';";
+$consulta = "update bus set placa = '".$placa."', conductor = '".$conductor."' ,
+id_ruta = '".$ruta."' , nit= '".$empresa."' where placa = '".$busActual."';";
+$resultado = mysqli_query($link, $consulta);
 
-          $resultado = mysqli_query($link, $consulta);
-          $bd->desconectar();
+$bd->desconectar();
 
-          
-        
-          	$_SESSION['mensaje'] = "bus actualizado correctamente";
-		  	$_SESSION['tipo'] = 'success';
-        	header('Location: /stopbus/app/admin/bus/');
+$_SESSION['mensaje'] = "bus actualizado correctamente";
+$_SESSION['tipo'] = 'success';
+header('Location: /stopbus/app/admin/bus/');
 
-          
-          
+
+
 ?>

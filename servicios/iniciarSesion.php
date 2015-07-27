@@ -8,17 +8,19 @@
    OR(correo ='".$_POST['usuario']."' AND password = '".$_POST['contrasenia']."');";
   $result = mysqli_query($link, $query);
 
-  $nombre = "";
+  $usuario = "";
   $cont = 0;
+  $correo = "";
   while($fila = mysqli_fetch_array($result)){
-  		$nombre = $fila['nombre'];
+  		$usuario = $fila['usuario'];
+      $correo = $fila['correo'];
   		$cont++;
   	}
 
   	if($cont != 1){
   		echo "0";
   	}else{
-  		echo $nombre;
+  		echo $usuario."&".$correo;
   	}
 
     $bd->desconectar();

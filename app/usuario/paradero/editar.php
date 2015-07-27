@@ -9,20 +9,21 @@ $latitud = $_POST['latitud'];
 $longitud = $_POST['longitud'];
 
 //nos conectamos con la bd y hacemos el udpate
-          $bd = new Conexion();
-          $link = $bd->conectar();
+$bd = new Conexion();
+$link = $bd->conectar();
 
-          $consulta = "update paradero set id_paradero= '".$id_ubicacion."', nombre = '".$nombre."' , latitud = '".$latitud."' , longitud= '".$longitud."' where id_paradero = '".$paraderoActual."'";
+$consulta = "update paradero set id_paradero= '".$id_ubicacion."', nombre = '".$nombre."' , latitud = '".$latitud."' , longitud= '".$longitud."' where id_paradero = '".$paraderoActual."'";
 
-          $resultado = mysqli_query($link, $consulta);
-          $bd->desconectar();
+$resultado = mysqli_query($link, $consulta);
 
-          
-        
-          	$_SESSION['mensaje'] = "paradero " . $nombre . " actualizado correctamente";
-		  	$_SESSION['tipo'] = 'success';
-        	header('Location: /stopbus/app/usuario/paradero/');
+$bd->desconectar();
 
-          
-          
+
+
+$_SESSION['mensaje'] = "paradero " . $nombre . " actualizado correctamente";
+$_SESSION['tipo'] = 'success';
+header('Location: /stopbus/app/usuario/paradero/');
+
+
+
 ?>

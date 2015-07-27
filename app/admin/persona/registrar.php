@@ -7,7 +7,7 @@
 
 	$consulta = "SELECT * from pasajero where usuario = '".$_POST['usuario']."';";
 	$resultado = mysqli_query($link, $consulta);
-	
+
 	$cont = 0;
 	while($fila = mysqli_fetch_array($resultado)){
 	$cont++;
@@ -23,7 +23,7 @@
 		}
 
 
-		$consulta= "INSERT INTO pasajero VALUES('".$_POST['usuario']."', '".$_POST['nombre']."','".$_POST['email']."','".$_POST['contra']."','no','".$_POST['rol']."', ".$empresa.");";
+		$consulta= "INSERT INTO pasajero VALUES('".$_POST['usuario']."', '".$_POST['nombre']."','".$_POST['email']."','".sha1($_POST['contra'])."','".$_POST['rol']."', ".$empresa.");";
 		$resultado = mysqli_query($link, $consulta);
 
 
@@ -39,7 +39,7 @@
 			header('Location: /stopbus/app/admin/persona/');
 		}
 	}else{
-		
+
 		//si lo encontro, es xq el usuario ya esta entonces le mostramos un error
 		$_SESSION['mensaje'] = 'Este usuario ya se encuentra registrado';
 		$_SESSION['tipo'] = 'error';

@@ -1,9 +1,9 @@
 <?php
  class Conexion{
-	private $host = "localhost";
-	private $usuario = "root";
-	private $bd = "stopbus";
-	private $pass = "";
+	private $host = "sandbox2.ufps.edu.co";
+	private $usuario = "ufps_61";
+	private $bd = "ufps_61";
+	private $pass = "ufps_90";
 	private $link;
 
 	public function conectar(){

@@ -21,6 +21,21 @@
           <form method="post" action="registrar.php" class="col s12 margen-admin">
               <h4 class="center-align titulo">Registrar paraderos</h4>
 
+              <div class="row">
+                <div class="input-field col s8 offset-s2">
+                  <select name="tipo">
+                    <option value="P">Parques</option>
+                    <option value="E">Estudio</option>
+                    <option value="H">Hoteles</option>
+                    <option value="C">Compras</option>
+                    <option value="B">Bancos</option>
+                    <option value="CA">Cajeros</option>
+                    <option value="R">Restaurantes</option>
+                  </select>
+                  <label>Tipo de Paradero</label>
+                </div>
+              </div>
+
                <div class="row">
                 <div class="input-field col s8 offset-s2">
                   <i class="material-icons prefix">location_on</i>
@@ -72,6 +87,7 @@
 <script src="../../../public/dist/sweetalert.min.js"></script>
 <script>
 $(document).ready(function(){
+  $('select').material_select();
   $(".button-collapse").sideNav();
 
   $('.collapsible').collapsible({

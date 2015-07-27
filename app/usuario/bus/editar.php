@@ -22,10 +22,11 @@ if($nit_empresa != null){
 }
 //este es como el else :P
 
-$consulta = "update bus set placa = '".$placa."', conductor = '".$conductor."' , 
+$consulta = "update bus set placa = '".$placa."', conductor = '".$conductor."' ,
 id_ruta = '".$ruta."' , nit= '".$nit_empresa."' where placa = '".$busActual."';";
 
 $resultado = mysqli_query($link, $consulta);
+
 $bd->desconectar();
 
 

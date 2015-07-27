@@ -9,20 +9,19 @@ $direccion = $_POST['direccion'];
 $telefono = $_POST['telefono'];
 
 //nos conectamos con la bd y hacemos el udpate
-          $bd = new Conexion();
-          $link = $bd->conectar();
+$bd = new Conexion();
+$link = $bd->conectar();
 
-          $consulta = "update empresa set nit = '".$nit."', nombre = '".$nombre."' , direccion = '".$direccion."' , telefono= '".$telefono."' where nit = '".$empresaActual."'";
+$consulta = "update empresa set nit = '".$nit."', nombre = '".$nombre."' , direccion = '".$direccion."' , telefono= '".$telefono."' where nit = '".$empresaActual."'";
 
-          $resultado = mysqli_query($link, $consulta);
-          $bd->desconectar();
+$resultado = mysqli_query($link, $consulta);
 
-          
-        
-          	$_SESSION['mensaje'] = "empresa " . $nombre . " actualizada correctamente";
-		  	$_SESSION['tipo'] = 'success';
-        	header('Location: /stopbus/app/admin/empresa/');
+$bd->desconectar();
 
-          
-          
+
+
+$_SESSION['mensaje'] = "empresa " . $nombre . " actualizada correctamente";
+$_SESSION['tipo'] = 'success';
+header('Location: /stopbus/app/admin/empresa/');
+
 ?>

@@ -13,7 +13,7 @@
 
 	if($cont == 0) {
 		//es porque no encontro a nadie
-		$consulta= "INSERT INTO pasajero VALUES('".$_POST['usuario']."', '".$_POST['nombre']."','".$_POST['correo']."','".$_POST['contrasenia']."','no','usuario', NULL);";
+		$consulta= "INSERT INTO pasajero VALUES('".$_POST['usuario']."', '".$_POST['nombre']."','".$_POST['correo']."','".$_POST['contrasenia']."','pasajero', NULL);";
 		$resultado = mysqli_query($link, $consulta);
 		$bd->desconectar();
 
@@ -22,7 +22,7 @@
 			echo "email_duplicado";
 		}else{
 			//todo bien con el registro vayase pa algun lado
-			echo $_POST['nombre'];
+			echo $_POST['usuario']."&".$_POST['correo'];
 		}
 	}else{
 		$bd->desconectar();

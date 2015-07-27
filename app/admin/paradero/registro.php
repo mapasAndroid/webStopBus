@@ -11,7 +11,7 @@
 <body>
   <!-- BARRA DE NAVEGACION -->
  <?php include ("../../../plantillas/navbar.html");?>
- 
+
  <main>
    <!--CONTENIDO DE LA PAGINA  -->
  <div class="container">
@@ -20,6 +20,21 @@
         <div class="row">
           <form method="post" action="registrar.php" class="col s12 margen-admin">
               <h4 class="center-align titulo">Registrar paraderos</h4>
+
+              <div class="row">
+                <div class="input-field col s8 offset-s2">
+                  <select name="tipo">
+                    <option value="P">Parques</option>
+                    <option value="E">Estudio</option>
+                    <option value="H">Hoteles</option>
+                    <option value="C">Compras</option>
+                    <option value="B">Bancos</option>
+                    <option value="CA">Cajeros</option>
+                    <option value="R">Restaurantes</option>
+                  </select>
+                  <label>Tipo de Paradero</label>
+                </div>
+              </div>
 
                <div class="row">
                 <div class="input-field col s8 offset-s2">
@@ -52,7 +67,7 @@
                   <label for="text">Longitud</label>
                 </div>
               </div>
-							
+
                   <div class="row">
                 <div class="input-field col s6 offset-s5">
                   <button class="btn waves-effect waves-light" type="submit" name="action">Registrar
@@ -72,7 +87,7 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../../../public/js/materialize.min.js"></script>
 <script src="../../../public/dist/sweetalert.min.js"></script>
-<script> 
+<script>
 $(document).ready(function(){
   $(".button-collapse").sideNav();
 
@@ -88,6 +103,3 @@ include("../../../plantillas_php/alerta.php");
 
 </body>
 </html>
-
-
-

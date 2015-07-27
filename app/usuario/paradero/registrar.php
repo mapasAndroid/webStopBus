@@ -8,7 +8,7 @@
 
 	$consulta = "SELECT * from paradero where id_ubicacion = '".$_POST['id_ubicacion']."';";
 	$resultado = mysqli_query($link, $consulta);
-	
+
 	$cont = 0;
 	while($fila = mysqli_fetch_array($resultado)){
 		$cont++;
@@ -18,7 +18,7 @@
 
 	if($cont == 0) {
 		//es porque no encontro a nadie
-		$consulta= "INSERT INTO paradero VALUES('".$_POST['id_ubicacion']."', '".$_POST['nombre']."','".$_POST['latitud']."','".$_POST['longitud']."');";
+		$consulta= "INSERT INTO paradero VALUES('".$_POST['tipo']."$".$_POST['id_ubicacion']."', '".$_POST['nombre']."','".$_POST['latitud']."','".$_POST['longitud']."');";
 		$resultado = mysqli_query($link, $consulta);
 
 
@@ -34,7 +34,7 @@
 			header('Location: /stopbus/app/usuario/paradero/');
 		}
 	}else{
-		
+
 		//si lo encontro, es xq el usuario ya esta entonces le mostramos un error
 		$_SESSION['mensaje'] = 'Este id de paradero ya esta registrado';
 		$_SESSION['tipo'] = 'error';

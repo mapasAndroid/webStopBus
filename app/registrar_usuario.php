@@ -7,7 +7,7 @@
 
 	$consulta = "SELECT * from pasajero where usuario = '".$_POST['usuario']."';";
 	$resultado = mysqli_query($link, $consulta);
-	
+
 	$cont = 0;
 	while($fila = mysqli_fetch_array($resultado)){
 		$cont++;
@@ -15,10 +15,10 @@
 
 	if($cont == 0) {
 		//es porque no encontro a nadie
-		$consulta= "INSERT INTO pasajero VALUES('".$_POST['usuario']."', '".$_POST['nombre']."','".$_POST['email']."','".sha1($_POST['contra'])."','no','usuario', NULL);";
+		$consulta= "INSERT INTO pasajero VALUES('".$_POST['usuario']."', '".$_POST['nombre']."','".$_POST['email']."','".sha1($_POST['contra'])."','usuario', NULL);";
 		$resultado = mysqli_query($link, $consulta);
 		$bd->desconectar();
-		
+
 		if($resultado == 0){
 			//es porque se encontro otro email igual
 			$_SESSION['mensaje'] = 'Email ya existe';
