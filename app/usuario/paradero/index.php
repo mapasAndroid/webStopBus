@@ -38,6 +38,7 @@
                <p>
                <b>Paradero No: </b> '.$fila['id_paradero'].'<br>
                <b>Nombre: </b> '.$fila['nombre'].'<br>
+               <b>Direccion: </b> '.$fila['direccion'].'<br>
                <b>Latitud: </b> '.$fila['latitud'].'<br>
                <b>Longitud: </b> '.$fila['longitud'].'<br>
                </p>

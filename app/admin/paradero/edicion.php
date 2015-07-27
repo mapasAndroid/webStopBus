@@ -55,31 +55,36 @@ include("../../../valid/validacionRol.php");
               </div>
             </div>
 
-            <div class="row">
-              <div class="input-field col s6">
-                <i class="material-icons prefix">payment</i>
-                <input id="paradero" type="text" class="validate" required name="id_paradero">
-                <label for="text">Id</label>
-              </div>
-              <div class="input-field col s6">
-                <i class="material-icons prefix">textsms</i>
-                <input id="nombre" type="text" class="validate" required name="nombre">
-                <label for="text">Nombre</label>
-              </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">payment</i>
+              <input id="paradero" type="text" class="validate" required name="id_paradero">
+              <label for="text">Id</label>
+            </div>
+            
+            <div class="input-field col s6">
+              <i class="material-icons prefix">textsms</i>
+              <input id="nombre" type="text" class="validate" required name="nombre">
+              <label for="text">Nombre</label>
             </div>
 
             <div class="row">
-              <div class="input-field col s6">
-                <i class="material-icons prefix">my_location</i>
-                <input id="latitud" type="text" class="validate" required name="latitud">
-                <label for="text">Latitud</label>
+              <div class="input-field col s8 offset-s2">
+                <i class="material-icons prefix">business</i>
+                <input id="r_direccion" type="text" class="validate" name="direccion" required>
+                <label for="text">Direcci&oacute;n</label>
               </div>
-              <div class="input-field col s6">
-                <i class="material-icons prefix">my_location</i>
-                <input id="longitud" type="text" class="validate" required name="longitud">
-                <label for="text">Longitud</label>
-              </div>
+            </div>
 
+            <div class="input-field col s6">
+              <i class="material-icons prefix">my_location</i>
+              <input id="latitud" type="text" class="validate" required name="latitud">
+              <label for="text">Latitud</label>
+            </div>
+
+            <div class="input-field col s6">
+              <i class="material-icons prefix">my_location</i>
+              <input id="longitud" type="text" class="validate" required name="longitud">
+              <label for="text">Longitud</label>
             </div>
 
             <div class="row">

@@ -18,7 +18,7 @@
 
 	if($cont == 0) {
 		//es porque no encontro a nadie
-		$consulta= "INSERT INTO paradero VALUES('".$_POST['tipo']."$".$_POST['id_ubicacion']."', '".$_POST['nombre']."','".$_POST['latitud']."','".$_POST['longitud']."');";
+		$consulta= "INSERT INTO paradero VALUES('".$_POST['tipo']."$".$_POST['id_ubicacion']."', '".$_POST['nombre']."','".$_POST['direccion']."','".$_POST['latitud']."','".$_POST['longitud']."');";
 		$resultado = mysqli_query($link, $consulta);
 
 

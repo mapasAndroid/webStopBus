@@ -59,6 +59,7 @@ $tabla="CREATE TABLE paradero
 (
 	id_paradero varchar (30),
 	nombre varchar (150) NOT NULL,
+	direccion varchar(200) NOT NULL,
 	latitud varchar (40) NOT NULL,
 	longitud varchar (40) NOT NULL,
 	PRIMARY KEY (id_paradero)

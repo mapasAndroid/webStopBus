@@ -5,6 +5,7 @@ include_once("../../../valid/bd/conexion.php");
 $paraderoActual = $_POST['paradero'];
 $id_ubicacion = $_POST['id_paradero'];
 $nombre = $_POST['nombre'];
+$direccion = $_POST['direccion'];
 $latitud = $_POST['latitud'];
 $longitud = $_POST['longitud'];
 
@@ -12,7 +13,7 @@ $longitud = $_POST['longitud'];
 $bd = new Conexion();
 $link = $bd->conectar();
 
-$consulta = "update paradero set id_paradero= '".$id_ubicacion."', nombre = '".$nombre."' , latitud = '".$latitud."' , longitud= '".$longitud."' where id_paradero = '".$paraderoActual."'";
+$consulta = "update paradero set id_paradero='".$id_ubicacion."', nombre = '".$nombre."' , direccion= '".$direccion."', latitud= '".$latitud."' , longitud= '".$longitud."' where id_paradero = '".$paraderoActual."'";
 
 $resultado = mysqli_query($link, $consulta);
 

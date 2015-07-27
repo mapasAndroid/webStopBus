@@ -54,6 +54,14 @@
 
               <div class="row">
                 <div class="input-field col s8 offset-s2">
+                  <i class="material-icons prefix">business</i>
+                  <input id="r_direccion" type="text" class="validate" name="direccion" required>
+                  <label for="text">Direcci&oacute;n</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s8 offset-s2">
                   <i class="material-icons prefix">my_location</i>
                   <input id="r_latitud" type="text" class="validate" name="latitud" required>
                   <label for="text">Latitud</label>
@@ -89,6 +97,7 @@
 <script src="../../../public/dist/sweetalert.min.js"></script>
 <script>
 $(document).ready(function(){
+  $('select').material_select();
   $(".button-collapse").sideNav();
 
   $('.collapsible').collapsible({
