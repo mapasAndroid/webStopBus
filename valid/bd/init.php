@@ -121,5 +121,20 @@ if($var){
 	echo "pasajeroxbus error <br>";
 }
 
+$tabla="CREATE TABLE waypoints
+(
+	id_ruta varchar (30),
+	latitud varchar (40),
+	longitud varchar (40),
+	PRIMARY KEY (id_ruta, latitud, longitud),
+	FOREIGN KEY (id_ruta) REFERENCES ruta (id_ruta) ON DELETE CASCADE ON UPDATE CASCADE
+	)ENGINE = InnoDB;";
+$var = mysqli_query($link, $tabla);
+if($var){
+	echo "waypoints creada correctamente <br>";
+}else{
+	echo "waypoints error <br>";
+}
+
 mysqli_close($link);
 ?>

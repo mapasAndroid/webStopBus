@@ -77,6 +77,16 @@ echo ',"1":';
   }
   echo json_encode($rows, JSON_FORCE_OBJECT);
 
+  echo ',"7":';
+
+  $consulta = "SELECT * from waypoints";
+  $resultado = mysqli_query($link, $consulta);
+  $rows = array();
+  while($r = mysqli_fetch_array($resultado)) {
+    $rows[] = $r;
+  }
+  echo json_encode($rows, JSON_FORCE_OBJECT);
+
 
   echo '}';
   $bd->desconectar();
