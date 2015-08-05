@@ -123,10 +123,11 @@ if($var){
 
 $tabla="CREATE TABLE waypoints
 (
+	id int auto_increment,
 	id_ruta varchar (30),
 	latitud varchar (40),
 	longitud varchar (40),
-	PRIMARY KEY (id_ruta, latitud, longitud),
+	PRIMARY KEY (id,id_ruta),
 	FOREIGN KEY (id_ruta) REFERENCES ruta (id_ruta) ON DELETE CASCADE ON UPDATE CASCADE
 	)ENGINE = InnoDB;";
 $var = mysqli_query($link, $tabla);
