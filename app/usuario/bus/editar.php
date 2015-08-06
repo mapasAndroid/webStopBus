@@ -7,6 +7,7 @@ $ruta = $_POST['ruta'];
 $empresa = $_POST['empresa'];
 $placa = $_POST['placa'];
 $conductor = $_POST['conductor'];
+$pos_actual= $_POST['pos_actual'];
 
 
 //nos conectamos con la bd y hacemos el udpate
@@ -23,7 +24,7 @@ if($nit_empresa != null){
 //este es como el else :P
 
 $consulta = "update bus set placa = '".$placa."', conductor = '".$conductor."' ,
-id_ruta = '".$ruta."' , nit= '".$nit_empresa."' where placa = '".$busActual."';";
+id_ruta = '".$ruta."' , nit= '".$empresa."', pos_actual= '".$pos_actual."' where placa = '".$busActual."';";
 
 $resultado = mysqli_query($link, $consulta);
 

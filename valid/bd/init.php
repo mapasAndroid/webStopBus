@@ -93,6 +93,7 @@ $tabla="CREATE TABLE bus
 	conductor varchar (150) NOT NULL,
 	id_ruta varchar (80),
 	nit varchar (30) NOT NULL,
+	pos_actual varchar (70) NOT NULL,
 	PRIMARY KEY (placa),
 	FOREIGN KEY (id_ruta) REFERENCES ruta (id_ruta) ON DELETE SET NULL ON UPDATE CASCADE,
 	FOREIGN KEY (nit) REFERENCES empresa (nit) ON DELETE CASCADE ON UPDATE CASCADE

@@ -75,6 +75,14 @@
                 </div>
               </div>
 
+              <div class="row">
+                <div class="input-field col s7 offset-s2">
+                  <i class="material-icons prefix">person_pin</i>
+                  <input id="r_pos_actual" type="text" class="validate" name="pos_actual" required>
+                  <label for="text">Posicion Actual</label>
+                </div>
+              </div>
+
                <!--selec de las rutas-->
               <div class="row">
                 <div class="input-field col s6 offset-s3">

@@ -17,7 +17,7 @@
 
 	if($cont == 0) {
 		//es porque no encontro a nadie
-		$consulta= "INSERT INTO bus VALUES('".$_POST['placa']."', '".$_POST['conductor']."','".$_POST['ruta']."','".$_POST['empresa']."');";
+		$consulta= "INSERT INTO bus VALUES('".$_POST['placa']."', '".$_POST['conductor']."','".$_POST['ruta']."','".$_POST['empresa']."','".$_POST['pos_actual']."');";
 		$resultado = mysqli_query($link, $consulta);
 
 

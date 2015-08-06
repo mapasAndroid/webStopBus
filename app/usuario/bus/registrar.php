@@ -25,7 +25,7 @@
 			header('Location: /stopbus/app/usuario/bus/');
 		}else{
 
-		$consulta= "INSERT INTO bus VALUES('".$_POST['placa']."', '".$_POST['conductor']."','".$_POST['ruta']."','".$nit_empresa."');";
+		$consulta= "INSERT INTO bus VALUES('".$_POST['placa']."', '".$_POST['conductor']."','".$_POST['ruta']."','".$_POST['empresa']."','".$_POST['pos_actual']."');";
 		$resultado = mysqli_query($link, $consulta);
 
 

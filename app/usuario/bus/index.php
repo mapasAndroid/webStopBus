@@ -38,7 +38,8 @@
                   <b>Placa: </b> '.$fila['placa'].'<br>
                   <b>Conductor: </b> '.$fila['conductor'].'<br>
                   <b>id_ruta: </b> '.$fila['id_ruta'].'<br>
-                  <b>nit empresa: </b> '.$fila['nit'].'
+                  <b>nit empresa: </b> '.$fila['nit'].'<br>
+                  <b>posicion actual: </b> '.$fila['pos_actual'].'
                   </p>
               </div>
             </li>';
