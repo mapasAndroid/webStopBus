@@ -31,6 +31,7 @@
               $resultado = mysqli_query($link, $consulta);
               $cont = 0;
                 while($fila = mysqli_fetch_array($resultado)){
+    $pos = explode("&", $fila['pos_actual']);
                  echo ' <li>
               <div class="collapsible-header active"><i class="material-icons">business</i>'.$fila["placa"].'</div>
               <div class="collapsible-body">
@@ -39,7 +40,7 @@
                   <b>Conductor: </b> '.$fila['conductor'].'<br>
                   <b>id_ruta: </b> '.$fila['id_ruta'].'<br>
                   <b>nit empresa: </b> '.$fila['nit'].'<br>
-                  <b>posicion actual: </b> '.$fila['pos_actual'].'
+                  <b>posicion actual: </b> '.$pos[0] . " - " .$pos[1].'
                   </p>
               </div>
             </li>';
