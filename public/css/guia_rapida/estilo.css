@@ -1,0 +1,119 @@
+@font-face {
+		font-family: 'Roboto Condensed';
+       src : url('../../font/roboto/RobotoCondensed-Bold.ttf');
+}
+
+html{
+
+	padding: 0;
+	margin: 0;
+
+}
+
+body{
+	background: url("../../imagenes/fondo.png")  no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#titulo1, .titulo_pagina, nav h2{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+#titulo1{
+	margin:2%;
+	font-size: 35pt;
+}
+
+.titulo_pagina{
+	margin: 0;
+}
+
+.container-all{
+	width: 100%;
+	height: 100%;
+
+}
+
+nav{
+
+	background:#fff;
+	width: 100%;
+	height: 70px;
+	-webkit-box-shadow: 0 2px 10px 1px #808080;
+	box-shadow: 0 2px 10px 1px #808080;
+}
+.logo-nav{
+	margin:10px;
+}
+
+nav img, nav h2{
+	float:left;
+}
+
+.fondo_primero_tuto{
+	background: url('../../imagenes/primero_tuto.png');
+	cursor: pointer;
+}
+
+.fondo_segundo_tuto{
+	background: url('../../imagenes/segundo_tuto.png');
+	cursor: pointer;
+}
+
+.fondo_tercero_tuto{
+	background: url('../../imagenes/tercero_tuto.png');
+	cursor: pointer;
+}
+.fondo_cuarto_tuto{
+	background: url('../../imagenes/cuarto_tuto.png');
+	cursor: pointer;
+}
+
+.fondo_quinto_tuto{
+	background: url('../../imagenes/quinto_tuto.png');
+	cursor: pointer;
+}
+
+.fondo_sexto_tuto{
+	background: url('../../imagenes/sexto_tuto.png');
+	cursor: pointer;
+}
+
+.visible{
+	display: block;
+}
+
+.oculto{
+	display: none;
+}
+
+.flecha_adelante{
+	margin-left: 10%;
+}
+
+.flecha_adelante, .flecha_atras{
+	margin-top: 38%;
+	cursor: pointer;
+}
+
+
+.flecha_adelante:active, .flecha_atras:active{
+	-webkit-transform: scale(0.8);
+    transform: scale(0.8);
+
+}
+
+.primero, .segundo, .tercero, .cuarto, .cinco, .seis{
+content: "";
+position: relative;
+/* Todas las posiciones a cero */
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+padding: 2rem;
+border-radius: 15px;
+}

@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="public/css/estilos.css">
 	<link rel="shortcut icon" type="text/css" href="public/imagenes/icono.ico">
 	<link rel="stylesheet" type="text/css" href="public/dist/sweetalert.css">
+	<link rel="stylesheet" href="public/css/guia_rapida/animate.css">
 	<title>..::StopBus::..</title>
 </head>
 <body>
@@ -34,7 +35,7 @@
 
 				<article class="post clearfix">
 					<a id="logo" class="thumb pull-left">
-						<img src="public/imagenes/logo.png" alt="imagen1" draggable="false">
+						<img class="animated zoomIn" src="public/imagenes/logo.png" alt="imagen1" draggable="false">
 					</a>
 					<h2 class="post-title text-center">
 						APLICACIÓN MÓVIL APOYADA EN GEO-REFERENCIACIÓN QUE PERMITA OPTIMIZAR EL USO DEL TRANSPORTE PÚBLICO EN LA CIUDAD DE CÚCUTA (STOPBUS).
