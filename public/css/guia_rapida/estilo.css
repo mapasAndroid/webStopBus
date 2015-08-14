@@ -82,6 +82,16 @@ nav img, nav h2{
 	cursor: pointer;
 }
 
+.fondo_siete_tuto{
+	background: url('../../imagenes/siete_tuto.png');
+	cursor: pointer;
+}
+
+.fondo_ocho_tuto{
+	background: url('../../imagenes/ocho_tuto.png');
+	cursor: pointer;
+}
+
 .visible{
 	display: block;
 }
@@ -106,7 +116,7 @@ nav img, nav h2{
 
 }
 
-.primero, .segundo, .tercero, .cuarto, .cinco, .seis{
+.primero, .segundo, .tercero, .cuarto, .cinco, .seis, .siete, .ocho{
 content: "";
 position: relative;
 /* Todas las posiciones a cero */

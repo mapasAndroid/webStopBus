@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var maximo_paginas = 4;
 	var pagina = 1;
 	var titulos = ["1. Activar GPS","2. Inicio y Registro",
-	"3. Lugares","4. Mapas" ];
+	"3. Lugares","4. Mapas"];
 	var animacion = "fadeIn";
 
 	/**
@@ -80,6 +80,22 @@ $(document).ready(function(){
 	}
 	);
 
+	$("#img_siete").hover(function(){
+		efectoHover("entrada", "#img_siete");
+	},
+	function(){
+		efectoHover("salida", "#img_siete");
+	}
+	);
+
+	$("#img_ocho").hover(function(){
+		efectoHover("entrada", "#img_ocho");
+	},
+	function(){
+		efectoHover("salida", "#img_ocho");
+	}
+	);
+
 	function calcularSiguiente(){
 		if(pagina == maximo_paginas)
 			pagina = 1;
@@ -136,6 +152,16 @@ $(document).ready(function(){
 		if(selector == "#img_seis"){
 			papa = ".seis";
 			clase ="fondo_sexto_tuto";
+		}
+
+		if(selector == "#img_siete"){
+			papa = ".siete";
+			clase ="fondo_siete_tuto";
+		}
+
+		if(selector == "#img_ocho"){
+			papa = ".ocho";
+			clase ="fondo_ocho_tuto";
 		}
 
 		//ahora pregunta si fue un llamado de tipo entrada o salida

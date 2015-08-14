@@ -86,18 +86,17 @@
 		<div class="main pagina4 oculto col-md-8 text-center">
 			<div class="row">
 				<div class="col-md-2"></div>
-				<div class="primero col-md-4 text-center">
-					<img id="img_cinco" src="public/imagenes/quinto.png" alt="" >
+				<div class="siete col-md-4 text-center">
+					<img id="img_siete" src="public/imagenes/siete.png" alt="" >
 				</div>
 
-				<div class="segundo col-md-4 text-center">
-					<img id="img_seis" src="public/imagenes/sexto.png" alt="">
+				<div class="ocho col-md-4 text-center">
+					<img id="img_ocho" src="public/imagenes/ocho.png" alt="">
 				</div>
 				<div class="col-md-2"></div>
-				
 			</div>
-			
 		</div>
+
 
 		<div class="text-center prueba col-md-2">
 			<img class="flecha_adelante hvr-buzz-out" src="public/imagenes/flecha_adelante.png" alt="">
