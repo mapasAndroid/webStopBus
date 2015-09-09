@@ -83,12 +83,22 @@ nav img, nav h2{
 }
 
 .fondo_siete_tuto{
-	background: url('../../imagenes/siete_tuto.png');
+	background: url('../../imagenes/septimo_tuto.png');
 	cursor: pointer;
 }
 
 .fondo_ocho_tuto{
 	background: url('../../imagenes/ocho_tuto.png');
+	cursor: pointer;
+}
+
+.fondo_nueve_tuto{
+	background: url('../../imagenes/nueve_tuto.png');
+	cursor: pointer;
+}
+
+.fondo_diez_tuto{
+	background: url('../../imagenes/diez_tuto.png');
 	cursor: pointer;
 }
 
@@ -116,7 +126,7 @@ nav img, nav h2{
 
 }
 
-.primero, .segundo, .tercero, .cuarto, .cinco, .seis, .siete, .ocho{
+.primero, .segundo, .tercero, .cuarto, .cinco, .seis, .siete, .ocho, .nueve, .diez{
 content: "";
 position: relative;
 /* Todas las posiciones a cero */

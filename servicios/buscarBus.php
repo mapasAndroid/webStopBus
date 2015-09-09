@@ -1,8 +1,8 @@
 <?php
-/*if($_POST['usuario'] != 'stopbus'  || $_POST['contrasenia'] != '990f2c3394b450ba65c04a7ffab18e2b9688ae84'){
+if($_POST['usuario'] != 'stopbus'  || $_POST['contrasenia'] != '990f2c3394b450ba65c04a7ffab18e2b9688ae84'){
   echo "0";
   exit();
-}*/
+}
 
 $usuario_usuario = $_POST['usuario_usuario'];
 $nombre_usuario = $_POST['nombre_usuario'];
@@ -39,8 +39,9 @@ mysqli_query($link, $insercion);
 $bd->desconectar();
 
 function makeUrlJsonReady($lat, $lon){
-  $url = "http://nominatim.openstreetmap.org/reverse?format=json&addressdetails=0&zoom=16&lat=".$lat."&lon=".$lon;
-  $response = json_decode(file_get_contents($url));
+	$url = "http://nominatim.openstreetmap.org/reverse?format=json&amp;addressdetails=0&amp;zoom=16&amp;lat=".$lat."&amp;lon=".$lon;
+	
+  $response = json_decode(file_get_contents(html_entity_decode($url)));
   return $response->display_name;
 }
 

@@ -97,6 +97,21 @@
 			</div>
 		</div>
 
+		<!-- div 5-->
+		<div class="main pagina5 oculto col-md-8 text-center">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="nueve col-md-4 text-center">
+					<img id="img_nueve" src="public/imagenes/nueve.png" alt="" >
+				</div>
+
+				<div class="diez col-md-4 text-center">
+					<img id="img_diez" src="public/imagenes/diez.png" alt="">
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+
 
 		<div class="text-center prueba col-md-2">
 			<img class="flecha_adelante hvr-buzz-out" src="public/imagenes/flecha_adelante.png" alt="">
